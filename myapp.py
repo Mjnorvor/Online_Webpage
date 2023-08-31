@@ -8,13 +8,8 @@ users_database = {
     "User1" : "password"
     }
 
-
-@app.route("/")
-def homepage():
-    return 'login.html'
-
-@app.route('/info/<name>')
-def foo(name):
+@app.route('/')
+def login():
     return render_template('login.html')
 
     
