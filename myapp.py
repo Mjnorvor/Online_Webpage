@@ -2,13 +2,20 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
+users_database = {
+    "Mjnorvor": "1100",
+    "User1" : "password"
+    }
+
+
 @app.route("/")
-def home():
-    return "home"
+def homepage():
+    return 'login.html'
 
 @app.route('/info/<name>')
 def foo(name):
-    return render_template('index.html', username = name)
+    return render_template('login.html')
 
     
 if __name__ == '__main__':
