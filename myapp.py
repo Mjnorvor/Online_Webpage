@@ -12,6 +12,10 @@ users_database = {
 def login():
     return render_template('login.html')
 
+@app.route('/')
+def next_page():
+    return render_template('index.html')
+
     
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=4444)
